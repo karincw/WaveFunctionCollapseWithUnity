@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -75,7 +76,28 @@ namespace Karin.WaveFunction
             Cell cellToCollapse = tempGrid[randIndex];
 
             cellToCollapse.collapsed = true;
-            Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length)];
+            if (cellToCollapse.tileOptions.Length == 0)
+            {
+                for (int i = 0; i < tempGrid.Count; i++)
+                {
+                    cellToCollapse.collapsed = false;
+
+                    randIndex = i;
+
+                    cellToCollapse = tempGrid[randIndex];
+
+                    cellToCollapse.collapsed = true;
+                    Debug.LogWarning("IndexOutOfRange예방");
+                    if (cellToCollapse.tileOptions.Length != 0)
+                    {
+                        Debug.Log("예방 해결");
+                        break;
+                    }
+                }
+            }
+            int randNum = UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length);
+            Tile selectedTile = cellToCollapse.tileOptions[randNum];
+
             cellToCollapse.tileOptions = new Tile[] { selectedTile };
 
             Tile foundTile = cellToCollapse.tileOptions[0];

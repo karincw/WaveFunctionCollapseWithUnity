@@ -215,7 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3986408472106928320
+--- !u!1001 &1082806227
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -225,11 +225,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -267,10 +267,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HyperWaveFunction
       objectReference: {fileID: 0}
-    - target: {fileID: 7660698723103028440, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
-      propertyPath: dimensions
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -281,4 +277,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 876852161}
-  - {fileID: 3986408472106928320}
+  - {fileID: 1082806227}

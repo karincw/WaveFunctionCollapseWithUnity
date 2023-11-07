@@ -23,6 +23,20 @@ namespace Karin.WaveFunction
             InitializeGrid();
         }
 
+        [ContextMenu("Restart")]
+        private void ReStart()
+        {
+            List<Tile> tiles = new List<Tile>();
+            tiles = GameObject.FindObjectsOfType<Tile>().ToList();
+            tiles.ForEach(t => Destroy(t));
+
+            Debug.Log("Reset");
+            gridComponents = new List<Cell>();
+            iterations = 0;
+
+            InitializeGrid();
+        }
+
         void InitializeGrid()
         {
             for (int y = 0; y < dimensions; y++)
@@ -30,6 +44,7 @@ namespace Karin.WaveFunction
                 for (int x = 0; x < dimensions; x++)
                 {
                     Cell newCell = Instantiate(cellObj, new Vector2(transform.position.x + x, transform.position.y + y), Quaternion.identity);
+                    newCell.name += $"{y}{x}";
                     newCell.CreateCell(false, tileObjects);
                     gridComponents.Add(newCell);
                 }
@@ -76,25 +91,6 @@ namespace Karin.WaveFunction
             Cell cellToCollapse = tempGrid[randIndex];
 
             cellToCollapse.collapsed = true;
-            if (cellToCollapse.tileOptions.Length == 0)
-            {
-                for (int i = 0; i < tempGrid.Count; i++)
-                {
-                    cellToCollapse.collapsed = false;
-
-                    randIndex = i;
-
-                    cellToCollapse = tempGrid[randIndex];
-
-                    cellToCollapse.collapsed = true;
-                    Debug.LogWarning("IndexOutOfRange예방");
-                    if (cellToCollapse.tileOptions.Length != 0)
-                    {
-                        Debug.Log("예방 해결");
-                        break;
-                    }
-                }
-            }
             int randNum = UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length);
             Tile selectedTile = cellToCollapse.tileOptions[randNum];
 
@@ -202,6 +198,11 @@ namespace Karin.WaveFunction
                         {
                             newTileList[i] = options[i];
                         }
+                        if(newTileList.Length == 0)
+                        {
+                            ReStart();
+                            return;
+                        }
 
                         newGenerationCell[index].ReCreateCell(newTileList);
                     }
@@ -214,6 +215,10 @@ namespace Karin.WaveFunction
             if (iterations < dimensions * dimensions)
             {
                 StartCoroutine(CheckEntropy());
+            }
+            else
+            {
+                Debug.Log("End");
             }
 
         }

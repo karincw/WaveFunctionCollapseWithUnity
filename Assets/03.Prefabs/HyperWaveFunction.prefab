@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd1740062583da4a9e47245b51cfa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 20
+  dimensions: 10
   tileObjects:
   - {fileID: 3046756989765766666, guid: 77ffc21dc4f54fa4cbb8c60e598ce664, type: 3}
   - {fileID: 5260387588313723212, guid: 1d07ac4f94e4f734e96b4d6fa83301f7, type: 3}
@@ -67,8 +67,6 @@ MonoBehaviour:
   - {fileID: 2843207499668188236, guid: 331c3153df84d69428e1a49c9b622f8f, type: 3}
   - {fileID: 5267882977161284120, guid: 7286bdf53b9b20e469f0bb1b92af1599, type: 3}
   - {fileID: 7390394969584439863, guid: 95ec1155ab65da94eadf5ac6d94ea3ff, type: 3}
-  - {fileID: 8745415041061843066, guid: 3c4e72949e351994385158f623317e67, type: 3}
-  - {fileID: 5868566591547706514, guid: 697ef2a91f64bf344a6c2eef029a676b, type: 3}
   - {fileID: 4855455138446899451, guid: 6e88d621572a0114cb15b48d86b78838, type: 3}
   - {fileID: 2652547859474479353, guid: a3801b8c0f5b2ea4983e180908393a53, type: 3}
   - {fileID: 2906308043928104357, guid: 6e4c4121d9ca9204e85ec073e1c09fc3, type: 3}
@@ -77,7 +75,6 @@ MonoBehaviour:
   - {fileID: 1216327968258133896, guid: 60f0ea9b712725f45bba3a91e36d7242, type: 3}
   - {fileID: 8784560215896723825, guid: cf74b33c3094c0d43b594b95024f13f4, type: 3}
   - {fileID: 434835848193724028, guid: 9f2f2b5014f4f4f44a66106df74dc6e8, type: 3}
-  - {fileID: 737018773438525593, guid: ba1a3e71cc5f1e94ab5604c765c2ca28, type: 3}
   - {fileID: 1341745385086310069, guid: c5c37c103f3546749816740b038e7667, type: 3}
   - {fileID: 1670788301856537517, guid: 23887464da81223468de8bf3252add54, type: 3}
   - {fileID: 568331213805981363, guid: 0362999370010f143aa247916edd1840, type: 3}

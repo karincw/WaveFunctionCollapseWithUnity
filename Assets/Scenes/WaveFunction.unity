@@ -215,7 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1082806227
+--- !u!1001 &2118767181
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -225,11 +225,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 45698908257984182, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -263,6 +263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1555414598462174909, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
+      propertyPath: cellObj
+      value: 
+      objectReference: {fileID: 5095993883659223789, guid: 8bbfa4957ccb3c548884c4a8795cff90, type: 3}
+    - target: {fileID: 1555414598462174909, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
+      propertyPath: tileObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3449635763289327202, guid: c5510a64785a3a2439a9cb6fa2fb8ee8, type: 3}
       propertyPath: m_Name
       value: HyperWaveFunction
@@ -277,4 +285,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 876852161}
-  - {fileID: 1082806227}
+  - {fileID: 2118767181}

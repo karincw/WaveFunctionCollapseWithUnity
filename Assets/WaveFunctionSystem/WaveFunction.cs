@@ -2,9 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Mathematics;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Karin.WaveFunction
 {
@@ -26,11 +24,12 @@ namespace Karin.WaveFunction
         [ContextMenu("Restart")]
         private void ReStart()
         {
-            List<Tile> tiles = new List<Tile>();
-            tiles = GameObject.FindObjectsOfType<Tile>().ToList();
-            tiles.ForEach(t => Destroy(t));
+            foreach (var cell in gridComponents)
+            {
+                Destroy(cell.gameObject);
+            }
 
-            Debug.Log("Reset");
+            Debug.Log("Restart");
             gridComponents = new List<Cell>();
             iterations = 0;
 

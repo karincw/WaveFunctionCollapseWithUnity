@@ -9,4 +9,14 @@ namespace Karin.WaveFunction
         public Tile[] downNeighbours;
         public Tile[] leftNeighbours;
     }
+
+    public class Tile3D : MonoBehaviour
+    {
+        public Tile[] frontNeibours;
+        public Tile[] backNeibours;
+        public Tile[] leftNeibours;
+        public Tile[] rightNeibours;
+        public Tile[] upNeibours;
+        public Tile[] downNeibours;
+    }
 }
